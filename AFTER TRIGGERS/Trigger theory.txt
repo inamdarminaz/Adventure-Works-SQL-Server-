@@ -1,0 +1,16 @@
+Data manipulation language (DML) triggers 
+-which are invoked automatically in response to INSERT, UPDATE, and DELETE events against tables.
+
+Data definition language (DDL) triggers 
+-which fire in response to CREATE, ALTER, and DROP statements. DDL triggers also fire in response to some system stored procedures that perform DDL-like operations.
+
+Logon triggers
+-which fire in response to LOGON events
+
+"Virtual” tables for triggers: INSERTED and DELETED
+SQL Server provides two virtual tables that are available specifically for triggers called INSERTED and DELETED tables. SQL Server uses these tables to capture the data of the modified row before and after the event occurs.
+
+*DML event*		*INSERTED table holds*				*DELETED table holds*
+INSERT			rows to be inserted					empty
+UPDATE			new rows modified by the update		existing rows modified by the update
+DELETE			empty										rows to be deleted
